@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Rishabh's Gym</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* CSS Reset */
+        body {
+            font-family: 'Baloo Bhai', cursive;
+            color: white;
+            margin: 0;
+            padding: 0;
+            background: url('img/bg.jpg');
+            background-size: 1920px 1080px;
+            background-repeat: no-repeat;
+        }
+        .left {
+            display: inline-block;
+            position: absolute;
+            left: 34px;
+            top: 30px;
+        }
+        .left img {
+            width: 65px;
+        }
+        .mid {
+            display: block;
+            width: 35%;
+            margin: 30px auto;
+            text-align: center;
+        }
+        .navbar {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .navbar li {
+            margin: 0 15px;
+            font-size: larger;
+        }
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: larger;
+        }
+        .navbar li a:hover, .navbar li a.active {
+            color: grey;
+            text-decoration: underline;
+        }
+        .navbar li a.about {
+            color: grey;
+        }
+        .navbar li a.home:hover {
+            color: grey;
+        }
+        .right {
+            position: absolute;
+            right: 34px;
+            top: 30px;
+        }
+        .btn {
+            border: 2px solid grey;
+            border-radius: 10px;
+            padding: 4px 14px;
+            margin: 10px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: grey;
+        }
+        .container {
+            position: absolute;
+            right: 50px; 
+            top: 135px; 
+            padding: 71px 150px;
+            width: 573px;
+            height: auto;
+            box-sizing: border-box;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); 
+        }
+        h1, p {
+            margin-bottom: 20px;
+        }
+        .img1 {
+            max-width: 100%;
+            height: auto;
+        }
+        @media (max-width: 768px) {
+            .container {
+                position: static;
+                margin: 50px 20px;
+                padding: 50px 20px;
+                width: auto;
+            }
+            .left, .right {
+                position: static;
+                text-align: center;
+                margin: 10px 0;
+            }
+            .mid {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="img/logo.jpg" alt="Gym Logo">
+            <div>Rishabh's GYM</div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="pro_gym.html" class="home">Home</a></li>
+                <li><a href="about.html" class="about active">About</a></li>
+                <li><a href="fitness.html">Fitness Calculator</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn">Call us Now</button>
+            <button class="btn">Email Us</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>About Rishabh's Gym</h1>
+        <p>Welcome to Rishabh's Gym, the premier fitness center in Mumbai!</p>
+        <p>Our gym is equipped with state-of-the-art equipment and offers a variety of fitness classes to suit all levels.</p>
+        <p>We have a team of certified trainers who are dedicated to helping you achieve your fitness goals.</p>
+        <p>Some of our achievements include:</p>
+        <ul>
+            <li>Winner of the Best Gym in Mumbai Award 2023</li>
+            <li>Over 10,000 satisfied members</li>
+            <li>Certified personal trainers and fitness experts</li>
+            <li>State-of-the-art facilities and equipment</li>
+        </ul>
+        <p>Join us and be a part of our fitness community!</p>
+        <button class="btn" onclick="location.href='pro_gym.html'">Go to Home</button>
+    </div>
+    
+</body>
+</html>

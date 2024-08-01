@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Submission Confirmation</title>
+    <style>
+        /* CSS Reset */
+        body {
+            font-family: 'Baloo Bhai', cursive;
+            color: white;
+            margin: 0;
+            padding: 0;
+            background: url('img/bg4\(1\).jpg');
+            background-size: 1580px 730px;
+            background-repeat: no-repeat;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 50px;
+            border-radius: 10px;
+        }
+        .container h1 {
+            margin-bottom: 20px;
+        }
+        .btn {
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: grey;
+        }
+        .left {
+            display: inline-block;
+            position: absolute;
+            left: 34px;
+            top: 30px;
+        }
+        .left img {
+            width: 65px;
+        }
+        .right {
+            position: absolute;
+            right: 34px;
+            top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="img/logo.jpg" alt="Gym Logo">
+            <div>Rishabh's GYM</div>
+        </div>
+        <div class="right">
+            <button class="btn">Call us Now</button>
+            <button class="btn">Email Us</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Rishabh's GYM</h1>
+        <p>YOUR FORM IS SUBMITTED</p>
+        <p>WE WILL REACH YOU OUT SOON</p>
+        <p>Thank you for choosing Rishabh's Gym!</p>
+        <button class="btn" onclick="location.href='pro_gym.html'">Go to Home</button>
+    </div>
+</body>
+</html>

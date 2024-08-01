@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gym Plans</title>
+    <style>
+        /* CSS Reset */
+        body {
+            font-family: 'Baloo Bhai', cursive;
+            color: white;
+            margin: 0;
+            padding: 0;
+            background: url('img/bg2.jpg');
+            background-size: 1540px 860px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .plan {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            margin: 20px;
+        }
+        .plan h2 {
+            margin: 0 0 10px;
+        }
+        .plan p {
+            margin: 10px 0;
+        }
+        .plan .price {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .btn {
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: grey;
+        }
+        .left {
+            display: inline-block;
+            position: absolute;
+            left: 34px;
+            top: 30px;
+        }
+        .left img {
+            width: 65px;
+        }
+        .mid {
+            display: block;
+            width: 35%;
+            margin: 30px auto;
+            text-align: center;
+        }
+        .navbar {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .navbar li {
+            margin: 0 15px;
+            font-size: larger;
+        }
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: larger;
+        }
+        .navbar li a:hover, .navbar li a.active {
+            color: grey;
+            text-decoration: underline;
+        }
+        .right {
+            position: absolute;
+            right: 34px;
+            top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="img/logo.jpg" alt="Gym Logo">
+            <div>Rishabh's GYM</div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="fitness.html">Fitness Calculator</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn">Call us Now</button>
+            <button class="btn">Email Us</button>
+        </div>
+    </header>
+    <div class="container">
+        <div class="plan">
+            <h2>BASIC</h2>
+            <p>Access to gym equipment</p>
+            <p class="price">$20/month</p>
+            <button class="btn" onclick="location.href='contact_info.html'">Select</button>
+        </div>
+        <div class="plan">
+            <h2>STANDARD</h2>
+            <p>Access to gym equipment</p>
+            <p>Group fitness classes</p>
+            <p class="price">$40/month</p>
+            <button class="btn" onclick="location.href='contact_info.html'">Select</button>
+        </div>
+        <div class="plan">
+            <h2>PREMIUM</h2>
+            <p>Access to gym equipment</p>
+            <p>Group fitness classes</p>
+            <p>Personal training sessions</p>
+            <p class="price">$60/month</p>
+            <button class="btn" onclick="location.href='contact_info.html'">Select</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fitness Calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* CSS */
+        body {
+            font-family: 'Baloo Bhai', cursive;
+            color: white;
+            margin: 0;
+            padding: 0;
+            background: url('img/cal.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .left {
+            display: inline-block;
+            position: absolute;
+            left: 34px;
+            top: 30px;
+        }
+        .left img {
+            width: 65px;
+        }
+        .mid {
+            display: block;
+            width: 35%;
+            margin: 30px auto;
+            text-align: center;
+        }
+        .navbar {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .navbar li {
+            margin: 0 15px;
+            font-size: larger;
+        }
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: larger;
+        }
+        .navbar li a:hover, .navbar li a.active {
+            color: grey;
+            text-decoration: underline;
+        }
+        .right {
+            position: absolute;
+            right: 34px;
+            top: 30px;
+        }
+        .btn {
+            border: 2px solid grey;
+            border-radius: 10px;
+            padding: 4px 14px;
+            margin: 10px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: grey;
+        }
+        .container {
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 30px;
+            width: 80%;
+            max-width: 600px;
+            background-color: rgba(0, 0, 0, 0.7);
+            box-sizing: border-box;
+            text-align: center;
+            border-radius: 10px;
+        }
+        input {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: medium;
+        }
+        button {
+            border: 2px solid white;
+            border-radius: 10px;
+            background-color: black;
+            color: white;
+            width: 100%;
+            padding: 10px;
+            cursor: pointer;
+            font-size: large;
+        }
+        button:hover {
+            background-color: grey;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="img/logo.jpg" alt="Gym Logo">
+            <div>Rishabh's GYM</div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="fitness.html" class="about active">Fitness Calculator</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn">Call us Now</button>
+            <button class="btn">Email Us</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Fitness Calculator</h1>
+        <h2>BMI</h2>
+        <form id="bmiForm">
+            <input type="number" id="weight" placeholder="Enter your weight (kg)" required>
+            <input type="number" id="height" placeholder="Enter your height (cm)" required>
+            <button type="button" onclick="calculateBMI()">Calculate BMI</button>
+        </form>
+        <p id="result"></p>
+    </div>
+    <script>
+        function calculateBMI() {
+            var weight = parseFloat(document.getElementById('weight').value);
+            var height = parseFloat(document.getElementById('height').value) / 100; // convert cm to meters
+            var bmi = weight / (height * height);
+            var result = document.getElementById('result');
+            result.textContent = 'Your BMI is: ' + bmi.toFixed(2);
+
+            if (bmi < 18.5) {
+                result.textContent += ' (Underweight)';
+            } else if (bmi >= 18.5 && bmi < 24.9) {
+                result.textContent += ' (Normal weight)';
+            } else if (bmi >= 25 && bmi < 29.9) {
+                result.textContent += ' (Overweight)';
+            } else {
+                result.textContent += ' (Obesity)';
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

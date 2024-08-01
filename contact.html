@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us - Rishabh Fitness</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* CSS */
+        body {
+            font-family: 'Baloo Bhai', cursive;
+            color: white;
+            margin: 0;
+            padding: 0;
+            background: url('img/bg5.jpg');
+
+            background-size: 1600px 800px;
+            background-repeat: no-repeat;
+        }
+        .left {
+            display: inline-block;
+            position: absolute;
+            left: 34px;
+            top: 30px;
+        }
+        .left img {
+            width: 65px;
+        }
+        .mid {
+            display: block;
+            width: 35%;
+            margin: 30px auto;
+            text-align: center;
+        }
+        .navbar {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .navbar li {
+            margin: 0 15px;
+            font-size: larger;
+        }
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: larger;
+        }
+        .navbar li a:hover, .navbar li a.active {
+            color: grey;
+            text-decoration: underline;
+        }
+        .right {
+            position: absolute;
+            right: 34px;
+            top: 30px;
+        }
+        .btn {
+            border: 2px solid grey;
+            border-radius: 10px;
+            padding: 4px 14px;
+            margin: 10px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: grey;
+        }
+        .container {
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 30px;
+            width: 80%;
+            max-width: 600px;
+            background-color: rgba(0, 0, 0, 0.7);
+            box-sizing: border-box;
+            text-align: center;
+            border-radius: 10px;
+        }
+        p {
+            font-size: large;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="img/logo.jpg" alt="Gym Logo">
+            <div>Rishabh's GYM</div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="pro_gym.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="fitness.html">Fitness Calculator</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn">Call us Now</button>
+            <button class="btn">Email Us</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>Phone: +91 78109004769</p>
+        <p>Address: Rishabh's Gym, 123 Fitness Street, Mumbai, Maharashtra, India</p>
+        
+    </div>
+</body>
+</html>
